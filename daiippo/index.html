@@ -10,18 +10,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- stylesheets. -->
-    <link rel="stylesheet" href="assets/css/vendor/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css?v4.1.0">
+    <link rel="stylesheet" href="assets/css/vendor/normalize.min.css?v3.0.1">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/print.css">
 
     <!-- scripts. -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery/2.1.1/jquery.min.js"><\/script>')</script>
     <!-- <script src="assets/js/main.js"></script> -->
 
   </head>
-  <body style="color: #fefefe;">
+  <body>
     <style>
       @-webkit-keyframes kenburns {
         0%, 100% { -webkit-transform: scale(1.5); }
@@ -91,18 +91,19 @@
         margin: 10vmin auto 0;
         text-align: left;
       ">
-├── assets <em style="color: #999;">(production files)</em>
-│   ├── css
-│   │   ├── vendor <em style="color: #999;">(3rd party styling)</em>
-│   │   └── &hellip;
-│   ├── fonts
-│   │   ├── fontname <em style="color: #999;">(each font family goes into a separate folder)</em>
-│   │   └── &hellip;
-│   ├── images
-│   │   └── &hellip;
-│   └── js
-│   │   ├── vendor <em style="color: #999;">(3rd party javascript)</em>
-│   │   └── &hellip;
+├── public <em style="color: #999;">(production files)</em>
+│   ├── assets
+│   │   ├── css
+│   │   │   ├── vendor <em style="color: #999;">(3rd party styling)</em>
+│   │   │   └── &hellip;
+│   │   ├── fonts
+│   │   │   ├── fontname <em style="color: #999;">(each font family goes into a separate folder)</em>
+│   │   │   └── &hellip;
+│   │   ├── images
+│   │   │   └── &hellip;
+│   │   └── js
+│   │       ├── vendor <em style="color: #999;">(3rd party javascript)</em>
+│   │       └── &hellip;
 ├── index.html
 ├── &hellip;
 └── src <em style="color: #999;">(working files)</em>
@@ -110,7 +111,7 @@
     └── styles
         ├── main.sass
         ├── meta <em style="color: #999;">(everything that won't be rendered as css)</em>
-            ├── _config.sass
+        │   ├── _config.sass
         │   └── &hellip;
         ├── print.sass
         └── shared <em style="color: #999;">(styling that's shared among multiple elements)</em>

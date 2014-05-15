@@ -1,0 +1,1 @@
+@media print{*{background:transparent !important;box-shadow:none !important;color:#000 !important;text-shadow:none !important}a{text-decoration:underline}a[href]::after{content:" (" attr(href) ")"}a[href^="javascript:"]::after,a[href^="#"]:after{content:""}p{orphans:3;widows:3}}
