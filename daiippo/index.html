@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+
+    <!-- meta information. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- stylesheets. -->
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/print.css">
+
+    <!-- scripts. -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <!-- <script src="assets/js/main.js"></script> -->
+
+  </head>
+  <body style="color: #fefefe;">
+    <style>
+      @-webkit-keyframes kenburns {
+        0%, 100% { -webkit-transform: scale(1.5); }
+        50% { -webkit-transform: scale(1); }
+      }
+
+      @-keyframes kenburns {
+        0%, 100% { -webkit-transform: scale(1.5); }
+        50% { -webkit-transform: scale(1); }
+      }
+
+      #intro::before {
+        content: "";
+        background-image: url('assets/images/bg.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        -webkit-animation: kenburns 60s infinite linear;
+        animation: kenburns 60s infinite linear;
+      }
+    </style>
+    <section id="intro" style="
+      display: -webkit-flex;
+      display: flex;
+      min-height: 100vh;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+    ">
+      <h1 class="aa-grayscale" style="
+        color: #fff;
+        font-family: 'SmartFontUI-Proportional';
+        font-size: 7.5rem;
+        font-weight: normal;
+        margin: auto;
+        position: relative;
+      ">第歩</h1>
+    </section>
+    <section style="
+      color: #333;
+      font-family: Gotham;
+      margin: 10vmin;
+      text-align: center;
+    ">
+      <p>Every web project needs to have a beginning. This is it!</p>
+      <hr style="
+        border-top-color: #999;
+        margin: 10vmin auto;
+        width: 12.5%;
+      ">
+      <p style="text-align: justify;">It first started as a simple collection of scripts, markup snippets and css definitions. I always used to need them when I set up a new project. From time to time things have been improved, deleted and refactored. I realized that most of the time I needed to look through the latest project in order to start a new one.</p>
+      <p>That's why I began to wonder, why not setup your own boilerplate?</p>
+      <hr style="
+        border-top-color: #999;
+        margin: 10vmin auto;
+        width: 12.5%;
+      ">
+      <p>So this is how a new web project looks like when you set it up with the daiippo boilerplate:</p>
+      <pre style="
+        display: inline-block;
+        margin: 10vmin auto 0;
+        text-align: left;
+      ">
+├── assets <em style="color: #999;">(production files)</em>
+│   ├── css
+│   │   ├── vendor <em style="color: #999;">(3rd party styling)</em>
+│   │   └── &hellip;
+│   ├── fonts
+│   │   ├── fontname <em style="color: #999;">(each font family goes into a separate folder)</em>
+│   │   └── &hellip;
+│   ├── images
+│   │   └── &hellip;
+│   └── js
+│   │   ├── vendor <em style="color: #999;">(3rd party javascript)</em>
+│   │   └── &hellip;
+├── index.html
+├── &hellip;
+└── src <em style="color: #999;">(working files)</em>
+    ├── scripts <em style="color: #999;">(custom javascript applications)</em>
+    └── styles
+        ├── main.sass
+        ├── meta <em style="color: #999;">(everything that won't be rendered as css)</em>
+            ├── _config.sass
+        │   └── &hellip;
+        ├── print.sass
+        └── shared <em style="color: #999;">(styling that's shared among multiple elements)</em>
+            ├── _elements.sass
+            ├── _layout.sass
+            ├── _typography.sass
+            └── ui <em style="color: #999;">(user interface elements)</em>
+                ├── _button.sass
+                ├── _form.sass
+                ├── _list.sass
+                └── _navigation.sass
+      </pre>
+    </section>
+  </body>
+</html>
