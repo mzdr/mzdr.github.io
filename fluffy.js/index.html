@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fluffy.js</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="assets/css/fluffy.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200italic,400italic">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Inconsolata">
+</head>
+<body>
+    <div class="grid">
+        <header>
+            <h1>Fluffy.js</h1>
+            <p>A simple, light and flexible JavaScript library for creating content with a fluffy cross-device interaction.</p>
+        </header>
+    </div>
+    <div id="fluffy-container" class="fluffy-container is-loading">
+        <div id="fluffy-scrollbar" class="fluffy-scrollbar"></div>
+        <div id="fluffy-stage" class="fluffy-stage">
+            <ul id="fluffy-content" class="fluffy-content">
+                <li class="fluffy-item" style="background-image: url('assets/images/1.jpg');"><img src="assets/images/1.jpg" alt=""></li>
+                <li class="fluffy-item" style="background-image: url('assets/images/2.jpg');"><img src="assets/images/2.jpg" alt=""></li>
+                <li class="fluffy-item" style="background-image: url('assets/images/3.jpg');"><img src="assets/images/3.jpg" alt=""></li>
+                <li class="fluffy-item" style="background-image: url('assets/images/4.jpg');"><img src="assets/images/4.jpg" alt=""></li>
+                <li class="fluffy-item" style="background-image: url('assets/images/5.jpg');"><img src="assets/images/5.jpg" alt=""></li>
+                <li class="fluffy-item" style="background-image: url('assets/images/6.jpg');"><img src="assets/images/6.jpg" alt=""></li>
+                <li class="fluffy-item" style="background-image: url('assets/images/7.jpg');"><img src="assets/images/7.jpg" alt=""></li>
+                <li class="fluffy-item" style="background-image: url('assets/images/8.jpg');"><img src="assets/images/8.jpg" alt=""></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid">
+        <h2>Usage</h2>
+        <p><strong>Fluffy is plain JavaScript.</strong> There's no need for heavy frameworks like jQuery or similar. It's totally fluid responsive, touch device friendly, super easy to customize and weights about <strong>6,2KB</strong> only.</p>
+        <p>Just download the latest version over <a href="http://github.com/mzdr/fluffy.js">here</a> and move it to your project. In your HTML file, where you want to have your fluffy area, make sure your markup looks like this:</p>
+        <pre><span style="opacity: 0.5;">&lt;div</span> id="fluffy-container" class="fluffy-container is-loading"<span style="opacity: 0.5;">&gt;&#10;    &lt;div</span> id="fluffy-scrollbar" class="fluffy-scrollbar"<span style="opacity: 0.5;">&gt;&lt;/div&gt;&#10;    &lt;div</span> id="fluffy-stage" class="fluffy-stage"<span style="opacity: 0.5;">&gt;&#10;        &lt;ul</span> id="fluffy-content" class="fluffy-content"<span style="opacity: 0.5;">&gt;&#10;            &lt;li</span> class="fluffy-item"<span style="opacity: 0.5;">&gt;&hellip;&lt;/li&gt;&#10;            &hellip;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;</span></pre>
+        <p>All IDs (<code>#fluffy-*</code>) are used to grab the respective DOM elements by the JavaScript logic. You can use different IDs, just remember to tell Fluffy which selectors it should look for. Feel free to edit, remove or add any class used by Fluffy, but be careful as you might break everything.</p>
+        <p>If everything is set up just include the almighty magic and you're ready to go.</p>
+        <pre><span style="opacity: 0.5;">&lt;script src="path/to/</span>fluffy.min.js<span style="opacity: 0.5;">"&gt;&lt;/script&gt;&#10;&lt;script&gt;</span>Fluffy.init(<span style="opacity: 0.25;">{ options }</span>);<span style="opacity: 0.5;">&lt;/script&gt;</span></pre>
+        <p></p>
+    </div>
+
+    <div class="grid">
+        <h2>Options</h2>
+        <p>This list shows all the available options and their default values.</p>
+        <p>The overall Fluffy container holding everything together.</p>
+        <pre>containerSelector: '#fluffy-container'</pre>
+
+        <p>The selector for the actual content.</p>
+        <pre>contentSelector: '#fluffy-content'</pre>
+
+        <p>Enable debugging in case the output isn't as expected. See your browsers console for more information.</p>
+        <pre>debug: false</pre>
+
+        <p>Selector to pick items, if none given all children in the content container will be picked.</p>
+        <pre>itemSelector: null</pre>
+
+        <p>Selector for the scrollbar.</p>
+        <pre>scrollbarSelector: '#fluffy-scrollbar'</pre>
+
+        <p>Displays the current position within the scrollable content in form of a scrollbar.</p>
+        <pre>showScrollbar: true</pre>
+
+        <p>Automatically adjust the height of the content container either relative to the smallest or tallest element found. Allowed values: <em>null</em>, <em>tallest</em>, <em>smallest</em>.</p>
+        <pre>smartHeight: null</pre>
+
+        <p>The stage holding the scrollable content.</p>
+        <pre>stageSelector: '#fluffy-stage'</pre>
+
+        <p>If no trigger selector is given, the parent node of the content selector is also the trigger area.</p>
+        <pre>triggerSelector: null</pre>
+
+        <p>Define which axis to trigger movement for. Allowed values: <em>x</em>, <em>y</em>, <em>xy</em>. (<em>not yet</em>)</p>
+        <pre>triggerDirection: 'x'</pre>
+    </div>
+
+    <div class="grid">
+        <h2>Support</h2>
+        <p>Fluffy has been tested in those browsers successfully:</p>
+        <ul>
+            <li>Google Chrome <strong>37</strong></li>
+            <li>Mozilla Firefox <strong>31</strong></li>
+            <li>Safari <strong>7</strong></li>
+            <li>Windows Internet Explorer <strong>9</strong></li>
+            <li>Android Browser <strong>4.3</strong></li>
+            <li>iOS Safari <strong>7.1</strong></li>
+        </ul>
+    </div>
+
+    <div class="grid">
+        <h2>Examples</h2>
+        <p>&hellip;</p>
+    </div>
+
+    <script src="assets/js/fluffy.min.js"></script>
+    <script>Fluffy.init({debug: true});</script>
+</body>
+</html>
