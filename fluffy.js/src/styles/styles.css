@@ -9,11 +9,12 @@ html, body {
 }
 
 body {
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(25, 25, 25);
     font-family: "Source Sans Pro", sans-serif;
     font-size: 21px;
     font-weight: 200;
     padding: 3em 0;
+    text-rendering: optimizeLegibility;
 }
 
 .grid {
@@ -59,12 +60,13 @@ p {
 }
 
 pre {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
     font-family: "Inconsolata", monospace;
     line-height: 32px;
     margin: 0.75em 20px;
-    overflow: scroll;
+    overflow: auto;
     padding: 0.75em 1em;
+    -webkit-overflow-scrolling: touch;
 }
 
 strong {
@@ -72,9 +74,8 @@ strong {
 }
 
 h1, h2, h3 {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     font-weight: 200;
-    text-rendering: optimizeLegibility;
 }
 
 h1 {
