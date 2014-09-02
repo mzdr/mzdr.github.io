@@ -12,7 +12,7 @@ html, body {
 body {
     background-color: rgb(25, 25, 25);
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 21px;
+    font-size: 1.3125em;
     font-weight: 200;
     padding: 3em 0;
     text-rendering: optimizeLegibility;
@@ -39,7 +39,7 @@ a:hover {
 
 p {
     margin: 2.5em 20px 0;
-    line-height: 32px;
+    line-height: 1.5em;
 }
 
 .list-dash {
@@ -63,7 +63,7 @@ p {
 pre {
     background-color: rgba(255, 255, 255, 0.05);
     font-family: "Inconsolata", monospace;
-    line-height: 32px;
+    line-height: 1.5em;
     margin: 0.75em 20px;
     overflow: auto;
     padding: 0.75em 1em;
