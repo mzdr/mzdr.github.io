@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fluffy.js &ndash; Separate trigger</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/fluffy.js/assets/css/styles.min.css">
+    <link rel="stylesheet" href="/fluffy.js/assets/css/fluffy.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200italic,400italic;Inconsolata">
+    <style>
+        body {
+            padding: 0;
+        }
+        .fluffy-container {
+            height: 50%;
+            margin-top: 5%;
+        }
+        #my-trigger {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            margin: 3em auto;
+            padding: 2em;
+            text-align: center;
+        }
+        #my-trigger::before {
+            content: "Hover me!";
+        }
+        .is-touch + #my-trigger::before {
+            color: rgb(230, 230, 230);
+            content: "There's no trigger area on touch devices! Just swipe 'em!";
+        }
+    </style>
+</head>
+<body>
+    <div id="fluffy-container" class="fluffy-container is-loading">
+        <div id="fluffy-stage" class="fluffy-stage">
+            <div id="fluffy-content" class="fluffy-content">
+                <img class="fluffy-item" src="/fluffy.js/assets/images/1.jpg" alt="">
+                <img class="fluffy-item" src="/fluffy.js/assets/images/2.jpg" alt="">
+                <img class="fluffy-item" src="/fluffy.js/assets/images/3.jpg" alt="">
+                <img class="fluffy-item" src="/fluffy.js/assets/images/4.jpg" alt="">
+                <img class="fluffy-item" src="/fluffy.js/assets/images/5.jpg" alt="">
+                <img class="fluffy-item" src="/fluffy.js/assets/images/6.jpg" alt="">
+                <img class="fluffy-item" src="/fluffy.js/assets/images/7.jpg" alt="">
+                <img class="fluffy-item" src="/fluffy.js/assets/images/8.jpg" alt="">
+            </div>
+        </div>
+        <div id="fluffy-scrollbar" class="fluffy-scrollbar"></div>
+    </div>
+
+    <p class="grid" id="my-trigger"></p>
+    <p class="grid"><a class="back" href="/fluffy.js/">Back</a></p>
+
+    <script src="/fluffy.js/assets/js/fluffy.min.js"></script>
+    <script>Fluffy.init({ triggerSelector: '#my-trigger', mousePadding: 0 });</script>
+</body>
+</html>

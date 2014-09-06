@@ -37,6 +37,12 @@ a:hover {
     border-bottom-color: rgba(255, 255, 255, 0.75);
 }
 
+a.back::before {
+    content:"\2039";
+    font-size: 1.25em;
+    padding-right: 10px;
+}
+
 p {
     margin: 2.5em 20px 0;
     line-height: 1.5em;
@@ -91,8 +97,4 @@ h2 {
     font-size: 1.5em;
     margin: 3em auto 0.75em;
     padding: 0 20px 1em;
-}
-
-img {
-    visibility: hidden;
 }
