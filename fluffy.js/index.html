@@ -9,7 +9,16 @@
     <link rel="stylesheet" href="/fluffy.js/assets/css/styles.min.css">
     <link rel="stylesheet" href="/fluffy.js/assets/css/fluffy.min.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200italic,400italic;Inconsolata">
-    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insert(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-12961239-6', 'auto');ga('send', 'pageview');</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-12961239-6', 'auto');
+      ga('send', 'pageview');
+
+    </script>
 </head>
 <body>
     <div class="grid">
@@ -35,12 +44,12 @@
     </div>
 
     <div class="grid">
-        <h2>Downloads</h2>
+        <h2 id="/downloads/">Downloads</h2>
         <p><strong>Fluffy is open source and always will be.</strong> You can download <a href="https://github.com/mzdr/fluffy.js/releases">official stable releases</a>, the latest development state or source code itself over at the official GitHub <a href="https://github.com/mzdr/fluffy.js">repository</a>.</p>
     </div>
 
     <div class="grid">
-        <h2>Usage</h2>
+        <h2 id="/usage/">Usage</h2>
         <p><strong>Fluffy is plain JavaScript.</strong> There's no need for heavy frameworks like jQuery or similar. It's totally fluid responsive, touch device friendly, super easy to customize and weights about <strong>8KB</strong> only.</p>
         <p>Just download the latest version over <a href="http://github.com/mzdr/fluffy.js">here</a> and move it to your project. In your HTML file, where you want to have your fluffy area, make sure your markup looks basically like this:</p>
         <pre><span style="opacity: 0.5;">&lt;div</span> id="fluffy-container" class="fluffy-container is-loading"<span style="opacity: 0.5;">&gt;&#10;    &lt;div</span> id="fluffy-stage" class="fluffy-stage"<span style="opacity: 0.5;">&gt;&#10;        &lt;ul</span> id="fluffy-content" class="fluffy-content"<span style="opacity: 0.5;">&gt;&#10;            &lt;li</span> class="fluffy-item"<span style="opacity: 0.5;">&gt;&#10;                &lt;!-- your content --&gt;&#10;            &lt;/li&gt;&#10;            &hellip;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;    &lt;div</span> id="fluffy-scrollbar" class="fluffy-scrollbar"<span style="opacity: 0.5;">&gt;&lt;/div&gt;&#10;&lt;/div&gt;</span></pre>
@@ -50,7 +59,7 @@
     </div>
 
     <div class="grid">
-        <h2>Options</h2>
+        <h2 id="/options/">Options</h2>
         <p>This list shows all the available options and their default values.</p>
         <p>The overall Fluffy container holding everything together.</p>
         <pre>containerSelector: '#fluffy-container'</pre>
@@ -90,7 +99,7 @@
     </div>
 
     <div class="grid">
-        <h2>Support</h2>
+        <h2 id="/support/">Support</h2>
         <p>Fluffy has been tested in those browsers successfully:</p>
         <ul class="list-dash">
             <li>Google Chrome <strong>37</strong></li>
@@ -103,7 +112,7 @@
     </div>
 
     <div class="grid">
-        <h2>Examples</h2>
+        <h2 id="/examples/">Examples</h2>
         <p>Checkout the examples to get a glimpse of some of the possibilities Fluffy has to offer.</p>
         <ul class="list-dash">
             <li><a href="/fluffy.js/examples/fullscreen-gallery/">A fullscreen gallery</a></li>
