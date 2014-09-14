@@ -1,13 +1,17 @@
 * {
     box-sizing: border-box;
-    color: rgb(210, 210, 210);
+    color: rgb(220, 220, 220);
     margin: 0;
     padding: 0;
 }
 
+a, pre, p, li {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 html, body {
     height: 100%;
-    overflow: auto;
 }
 
 body {
@@ -23,6 +27,11 @@ body {
     max-width: 960px;
     width: 96%;
     margin: 3em auto 5em;
+}
+
+.pb {
+    margin-bottom: 0;
+    padding-bottom: 5em;
 }
 
 a {
@@ -47,14 +56,12 @@ a.back::before {
 p {
     margin: 2.5em 20px 0;
     line-height: 1.5em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 .list-dash {
+    list-style-type: none;
     margin: 2.5em 20px 0;
     padding-left: 0;
-    list-style-type: none;
 }
 .list-dash li {
     margin-top: 0.75em;
@@ -80,8 +87,6 @@ pre {
     padding: 0.75em 1em;
 
     -webkit-overflow-scrolling: touch;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 strong {
