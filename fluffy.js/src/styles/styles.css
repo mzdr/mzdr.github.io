@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    color: rgb(230, 230, 230);
+    color: rgb(210, 210, 210);
     margin: 0;
     padding: 0;
 }
@@ -14,7 +14,7 @@ body {
     background-color: rgb(25, 25, 25);
     font-family: "Source Sans Pro", sans-serif;
     font-size: 1.3125em;
-    font-weight: 200;
+    font-weight: 400;
     padding: 3em 0;
     text-rendering: optimizeLegibility;
 }
@@ -47,6 +47,8 @@ a.back::before {
 p {
     margin: 2.5em 20px 0;
     line-height: 1.5em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .list-dash {
@@ -70,15 +72,20 @@ p {
 pre {
     background-color: rgba(255, 255, 255, 0.05);
     font-family: "Inconsolata", monospace;
-    line-height: 1.5em;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 21px;
     margin: 0.75em 20px;
     overflow: auto;
     padding: 0.75em 1em;
+
     -webkit-overflow-scrolling: touch;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 strong {
-    font-weight: 400;
+    font-weight: 600;
 }
 
 h1, h2, h3 {
