@@ -6,7 +6,7 @@
     <title>Fluffy.js</title>
     <meta name="description" content="A simple, light and flexible JavaScript library that empowers you, to create content that anyone can interact with in a real fluffy way.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/fluffy.js/assets/css/styles.min.css">
+    <link rel="stylesheet" href="/fluffy.js/assets/css/styles.css">
     <link rel="stylesheet" href="/fluffy.js/assets/css/fluffy.min.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,400italic,600;Inconsolata">
     <script>
@@ -21,12 +21,10 @@
     </script>
 </head>
 <body>
-    <div class="grid">
-        <header>
-            <h1>Fluffy.js</h1>
-            <p>A simple, light and flexible JavaScript library that empowers you, to create content that anyone can interact with in a real fluffy way.</p>
-        </header>
-    </div>
+    <header class="grid">
+        <h1>Fluffy.js</h1>
+        <p>A simple, light and flexible JavaScript library that empowers you, to create content that anyone can interact with in a real fluffy way.</p>
+    </header>
     <div id="fluffy-container" class="fluffy-container is-loading">
         <div id="fluffy-stage" class="fluffy-stage">
             <div id="fluffy-content" class="fluffy-content">
@@ -43,17 +41,17 @@
         <div id="fluffy-scrollbar" class="fluffy-scrollbar"></div>
     </div>
 
-    <div class="grid">
+    <section class="grid">
         <p><strong>Fluffy can be many things.</strong> It could be a portfolio, a slideshow, a gallery, a tool for interactive exploration or just a simple way helping you to fit lots of content into a small screen.</p>
         <p>Checkout the <a href="#/examples/">examples</a> to get a glimpse of some of the possibilities Fluffy has to offer.</p>
-    </div>
+    </section>
 
-    <div class="grid">
+    <section class="grid">
         <h2 id="/downloads/">Downloads</h2>
         <p><strong>Fluffy is open source and always will be.</strong> You can download <a href="https://github.com/mzdr/fluffy.js/releases">stable releases</a>, the <a href="https://github.com/mzdr/fluffy.js/tree/develop">latest development</a> state or the source code itself over at the official GitHub <a href="https://github.com/mzdr/fluffy.js">repository</a>.</p>
-    </div>
+    </section>
 
-    <div class="grid">
+    <section class="grid">
         <h2 id="/usage/">Usage</h2>
         <p><strong>Fluffy is plain JavaScript.</strong> There's no need for heavy frameworks like jQuery or similar. It's totally fluid responsive, touch device friendly, super easy to customize and weights about <strong>8KB</strong> only.</p>
         <p>Just download the latest version over <a href="http://github.com/mzdr/fluffy.js">here</a> and move it to your project. In your HTML file, where you want to have your fluffy area, make sure your markup looks basically like this:</p>
@@ -61,9 +59,9 @@
         <p>All IDs (<code>#fluffy-*</code>) are used to grab the respective DOM elements by the JavaScript logic. You can use different IDs, just remember to tell Fluffy which selectors it should look for. Feel free to adjust any class used by Fluffy to your liking, but be careful as you might break something.</p>
         <p>If everything is set up just include the almighty magic and you're ready to go.</p>
         <pre><span style="opacity: 0.5;">&lt;script src="path/to/</span>fluffy.min.js<span style="opacity: 0.5;">"&gt;&lt;/script&gt;&#10;&lt;script&gt;</span>Fluffy.init(<span style="opacity: 0.25;">{ options }</span>);<span style="opacity: 0.5;">&lt;/script&gt;</span></pre>
-    </div>
+    </section>
 
-    <div class="grid">
+    <section class="grid">
         <h2 id="/options/">Options</h2>
         <p>This list shows all the available options and their default values.</p>
         <p>The overall Fluffy container holding everything together.</p>
@@ -101,9 +99,9 @@
 
         <p>Adds space (in pixel) to the trigger area where no action happens.</p>
         <pre>mousePadding: 60</pre>
-    </div>
+    </section>
 
-    <div class="grid">
+    <section class="grid">
         <h2 id="/support/">Support</h2>
         <p>Fluffy has been tested in those browsers successfully:</p>
         <ul class="list-dash">
@@ -114,9 +112,9 @@
             <li>Android Browser <strong>4.3</strong></li>
             <li>iOS Safari <strong>7.1</strong></li>
         </ul>
-    </div>
+    </section>
 
-    <div class="grid pb">
+    <section class="grid pb">
         <h2 id="/examples/">Examples</h2>
         <ul class="list-dash">
             <li><a href="/fluffy.js/examples/fullscreen-gallery/">A fullscreen gallery</a></li>
@@ -125,7 +123,7 @@
             <li><a href="/fluffy.js/examples/separate-trigger/">With a separate trigger area</a></li>
             <li><a href="/fluffy.js/examples/big-picture/">Big picture exploration</a></li>
         </ul>
-    </div>
+    </section>
 
     <script src="/fluffy.js/assets/js/fluffy.min.js"></script>
     <script>Fluffy.init();</script>
