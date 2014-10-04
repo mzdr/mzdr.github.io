@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Orientation.js</title>
+    <meta name="author" content="Sebastian Prein">
+    <meta name="description" content="A tiny JavaScript library that helps you and your visitors to keep track of knowing where they are.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/orientation.js/assets/css/styles.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,400italic,600;Inconsolata">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-12961239-6', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    <nav class="site-header">
+        <div class="grid">
+            <svg class="progress-circle" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" xml:space="preserve">
+                <circle fill="transparent" stroke="#004ebc" stroke-width="3" stroke-dasharray="100" cx="9" cy="9" r="7" data-orjs-target="html" data-orjs-style="strokeDashoffset" />
+            </svg>
+            <ul class="site-navigation">
+                <li><a href=""><strong class="site-title">Orientation.js</strong></a></li>
+                <li><a data-orjs-target="#introduction" data-orjs-style="height" href="#/introduction/">Introduction</a></li>
+                <li><a data-orjs-target="#downloads" data-orjs-style="height" href="#/downloads/">Downloads</a></li>
+                <li><a data-orjs-target="#usage" data-orjs-style="height" href="#/usage/">Usage</a></li>
+                <li><a data-orjs-target="#options" data-orjs-style="height" href="#/options/">Options</a></li>
+                <li><a data-orjs-target="#support" data-orjs-style="height" href="#/support/">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="site-content">
+        <header class="hero">
+            <h1> down!</h1>
+        </header>
+
+        <section id="introduction" class="grid">
+            <h2 id="/introduction/">Introduction</h2>
+            <p>You're viewing the demonstration site of <strong>Orientation.js</strong>, a tiny JavaScript library that helps <strong>you</strong> and <strong>your visitors</strong> keep track of knowing where they are on your website.</p>
+            <p>It's very simple to set up, <strong>no matter</strong> if it's a new website or an existing one. If it's a gallery, a portfolio, a forum or a blog &mdash; <strong>whatever</strong> it is, it will help your visitors getting along with your website!</p>
+            <p>Just watch the navigation on top of this site while scrolling/swiping to grasp the idea and check out the <a href="#/usage/">usage</a> section to get to know how to do it!</p>
+        </section>
+
+        <section id="downloads" class="grid">
+            <h2 id="/downloads/">Downloads</h2>
+            <p><strong>Orientation is open source and always will be!</strong> You can download <a href="https://github.com/mzdr/orientation.js/releases">stable releases</a>, the <a href="https://github.com/mzdr/orientation.js/tree/develop">latest development</a> state or the source code itself over at the official GitHub <a href="https://github.com/mzdr/orientation.js">repository</a>.</p>
+        </section>
+
+        <section id="usage" class="grid">
+            <h2 id="/usage/">Usage</h2>
+
+            <p>Before we dig right into it you should load the almighty magic. Place the following code somewhere between the <strong>head</strong> or <strong>body</strong> tag. &nbsp;&mdash;&nbsp; <em>Don't forget to adjust the paths!</em></p>
+            <pre>&lt;script src="path/to/<em>orientation.min.js</em>"&gt;&lt;/script&gt;&#10;&lt;script&gt;<em>Orientation.init(</em>{ options }<em>);</em>&lt;/script&gt;</pre>
+
+            <p>Now as you're ready to go you should know that <strong>Orientation is super flexible!</strong> But where to start? The most basic way to use it is by defining just a target. In that case Orientation is going to watch the targets position when the <strong>window</strong> (by default) is getting scrolled.</p>
+            <p>So for example you have a <code>&lt;div&gt;</code> element where you want to show the progress of the whole website. All you need to do is to set it up with the <strong>html</strong> selector as the target.</p>
+            <pre>&lt;div <em>data-orjs-target="html"</em>&gt;&lt;/div&gt;</pre>
+
+            <p>After the initializing the <code>&lt;div&gt;</code> will get additional data attributes that represent the collected data.</p>
+            <pre>&lt;div <em>data-orjs-target="html" data-orjs-status="is-there" data-orjs-progress="23"</em>&gt;&lt;/div&gt;</pre>
+
+            <p>Starting with <code>data-orjs-status</code> which is just a simple status with three states given: <strong>is-upcoming</strong>, <strong>is-there</strong> and <strong>is-gone</strong>. They just tell roughly the position relative to the container (which is by default the window).</p>
+
+            <p>On the other hand there is <code>data-orjs-progress</code> which will give you a percentage between 0 &ndash; 100 where 0 means that the target element is not visible and at 100 it's fully visible.</p>
+
+            <p>Scroll within the box below it should help you to understand it!</p>
+            <div class="example">
+                <header class="example-header example-orjs-data" data-orjs-target="#example1" data-orjs-container="#example1-container"></header>
+                <div id="example1-container" class="example-stage">
+                    <div id="example1" class="example-visual">Hello!</div>
+                </div>
+            </div>
+
+            <p>There's another data attribute called <code>data-orjs-style</code>. It's perfect if you want to use the scrolling progress as a value for a specific CSS style property which needs to be written in <em>camelCase</em>!</p>
+            <p>So let's say you add this attribute and want it to mirror the progress by the width of the element.</p>
+            <pre>&lt;div class="progress-bar" <em>data-orjs-target="html" data-orjs-style="width"</em>&gt;&lt;/div&gt;</pre>
+
+            <p>The example could look like this.</p>
+            <div class="example-progress">
+                <div class="progress-bar" data-orjs-target="html" data-orjs-style="width"></div>
+            </div>
+            <p>Keep scrolling! It's the progress of the whole site&hellip;</p>
+        </section>
+
+        <section id="options" class="grid">
+            <h2 id="/options/">Options</h2>
+            <p>This list shows all the available options and their default values.</p>
+
+            <p>Enable debugging in case the output isn't as expected. See your browsers console for more information.</p>
+            <pre><em>debug:</em> false</pre>
+        </section>
+
+        <section id="support" class="grid">
+            <h2 id="/support/">Support</h2>
+            <p>Orientation has been tested in those browsers successfully:</p>
+            <ul class="list-dash">
+                <li>Google Chrome <strong>37</strong></li>
+                <li>Mozilla Firefox <strong>31</strong></li>
+                <li>Safari <strong>7</strong></li>
+                <!-- <li>Windows Internet Explorer <strong>9 &ndash; 10</strong></li>
+                <li>Android Browser <strong>4.3</strong></li>
+                <li>iOS Safari <strong>7.1</strong></li> -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="/orientation.js/assets/js/orientation.min.js"></script>
+    <script>Orientation.init();</script>
+</body>
+</html>
