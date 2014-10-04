@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Fluffy.js</title>
+    <meta name="author" content="Sebastian Prein">
     <meta name="description" content="A simple, light and flexible JavaScript library that empowers you, to create content that anyone can interact with in a real fluffy way.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/fluffy.js/assets/css/styles.css">
@@ -42,63 +43,63 @@
     </div>
 
     <section class="grid">
-        <p><strong>Fluffy can be many things.</strong> It could be a portfolio, a slideshow, a gallery, a tool for interactive exploration or just a simple way helping you to fit lots of content into a small screen.</p>
+        <p><strong>Fluffy can be many things!</strong> It could be a portfolio, a slideshow, a gallery, a tool for interactive exploration or just a simple way helping you to fit lots of content into a small screen.</p>
         <p>Checkout the <a href="#/examples/">examples</a> to get a glimpse of some of the possibilities Fluffy has to offer.</p>
     </section>
 
     <section class="grid">
         <h2 id="/downloads/">Downloads</h2>
-        <p><strong>Fluffy is open source and always will be.</strong> You can download <a href="https://github.com/mzdr/fluffy.js/releases">stable releases</a>, the <a href="https://github.com/mzdr/fluffy.js/tree/develop">latest development</a> state or the source code itself over at the official GitHub <a href="https://github.com/mzdr/fluffy.js">repository</a>.</p>
+        <p><strong>Fluffy is open source and always will be!</strong> You can download <a href="https://github.com/mzdr/fluffy.js/releases">stable releases</a>, the <a href="https://github.com/mzdr/fluffy.js/tree/develop">latest development</a> state or the source code itself over at the official GitHub <a href="https://github.com/mzdr/fluffy.js">repository</a>.</p>
     </section>
 
     <section class="grid">
         <h2 id="/usage/">Usage</h2>
-        <p><strong>Fluffy is plain JavaScript.</strong> There's no need for heavy frameworks like jQuery or similar. It's totally fluid responsive, touch device friendly, super easy to customize and weights about <strong>8KB</strong> only.</p>
+        <p><strong>Fluffy is plain JavaScript!</strong> There's no need for heavy frameworks like jQuery or similar. It's totally fluid responsive, touch device friendly, super easy to customize and weights about <strong>9KB</strong> only.</p>
         <p>Just download the latest version over <a href="http://github.com/mzdr/fluffy.js">here</a> and move it to your project. In your HTML file, where you want to have your fluffy area, make sure your markup looks basically like this:</p>
-        <pre><span style="opacity: 0.5;">&lt;div</span> id="fluffy-container" class="fluffy-container is-loading"<span style="opacity: 0.5;">&gt;&#10;    &lt;div</span> id="fluffy-stage" class="fluffy-stage"<span style="opacity: 0.5;">&gt;&#10;        &lt;ul</span> id="fluffy-content" class="fluffy-content"<span style="opacity: 0.5;">&gt;&#10;            &lt;li</span> class="fluffy-item"<span style="opacity: 0.5;">&gt;&#10;                &lt;!-- your content --&gt;&#10;            &lt;/li&gt;&#10;            &hellip;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;    &lt;div</span> id="fluffy-scrollbar" class="fluffy-scrollbar"<span style="opacity: 0.5;">&gt;&lt;/div&gt;&#10;&lt;/div&gt;</span></pre>
+        <pre>&lt;div <em>id="fluffy-container" class="fluffy-container is-loading"</em>&gt;&#10;    &lt;div <em>id="fluffy-stage" class="fluffy-stage"</em>&gt;&#10;        &lt;ul <em>id="fluffy-content" class="fluffy-content"</em>&gt;&#10;            &lt;li <em>class="fluffy-item"</em>&gt;&#10;                &lt;!-- your content --&gt;&#10;            &lt;/li&gt;&#10;            &hellip;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;    &lt;div <em>id="fluffy-scrollbar" class="fluffy-scrollbar"</em>&gt;&lt;/div&gt;&#10;&lt;/div&gt;</pre>
         <p>All IDs (<code>#fluffy-*</code>) are used to grab the respective DOM elements by the JavaScript logic. You can use different IDs, just remember to tell Fluffy which selectors it should look for. Feel free to adjust any class used by Fluffy to your liking, but be careful as you might break something.</p>
-        <p>If everything is set up just include the almighty magic and you're ready to go.</p>
-        <pre><span style="opacity: 0.5;">&lt;script src="path/to/</span>fluffy.min.js<span style="opacity: 0.5;">"&gt;&lt;/script&gt;&#10;&lt;script&gt;</span>Fluffy.init(<span style="opacity: 0.25;">{ options }</span>);<span style="opacity: 0.5;">&lt;/script&gt;</span></pre>
+        <p>If everything is set up just include the almighty magic and you're ready to go. &nbsp;&mdash;&nbsp; <em>Don't forget to adjust the paths!</em></p>
+        <pre>&lt;link rel="stylesheet" href="path/to/<em>fluffy.min.css</em>"&gt;&#10;&lt;script src="path/to/<em>fluffy.min.js</em>"&gt;&lt;/script&gt;&#10;&lt;script&gt;<em>Fluffy.init(</em>{ options }<em>);</em>&lt;/script&gt;</pre>
     </section>
 
     <section class="grid">
         <h2 id="/options/">Options</h2>
         <p>This list shows all the available options and their default values.</p>
         <p>The overall Fluffy container holding everything together.</p>
-        <pre>containerSelector: '#fluffy-container'</pre>
+        <pre><em>containerSelector:</em> '#fluffy-container'</pre>
 
         <p>The selector for the actual content.</p>
-        <pre>contentSelector: '#fluffy-content'</pre>
+        <pre><em>contentSelector:</em> '#fluffy-content'</pre>
 
         <p>Enable debugging in case the output isn't as expected. See your browsers console for more information.</p>
-        <pre>debug: false</pre>
+        <pre><em>debug:</em> false</pre>
 
         <p>Selector to pick items, if none given all children in the content container will be picked.</p>
-        <pre>itemSelector: null</pre>
+        <pre><em>itemSelector:</em> null</pre>
 
         <p>Selector for the scrollbar.</p>
-        <pre>scrollbarSelector: '#fluffy-scrollbar'</pre>
+        <pre><em>scrollbarSelector:</em> '#fluffy-scrollbar'</pre>
 
         <p>Displays the current position within the scrollable content in form of a scrollbar.</p>
-        <pre>showScrollbar: true</pre>
+        <pre><em>showScrollbar:</em> true</pre>
 
         <p>Automatically adjust the height of the content container either relative to the smallest or tallest element found. Allowed values: <em>false</em>, <em>'tallest'</em>, <em>'smallest'</em>.</p>
-        <pre>smartHeight: false</pre>
+        <pre><em>smartHeight:</em> false</pre>
 
         <p>The stage holding the scrollable content.</p>
-        <pre>stageSelector: '#fluffy-stage'</pre>
+        <pre><em>stageSelector:</em> '#fluffy-stage'</pre>
 
         <p>If no trigger selector is given, the Fluffy container is also the trigger area.</p>
-        <pre>triggerSelector: null</pre>
+        <pre><em>triggerSelector:</em> null</pre>
 
         <p>Define which axis to trigger movement for. Allowed values: <em>x</em>, <em>y</em>, <em>xy</em>.</p>
-        <pre>triggerDirection: 'x'</pre>
+        <pre><em>triggerDirection:</em> 'x'</pre>
 
         <p>The higher the value the more lazier the reaction to the mouse movement will be.</p>
-        <pre>mouseDamp: 20</pre>
+        <pre><em>mouseDamp:</em> 20</pre>
 
         <p>Adds space (in pixel) to the trigger area where no action happens.</p>
-        <pre>mousePadding: 60</pre>
+        <pre><em>mousePadding:</em> 60</pre>
     </section>
 
     <section class="grid">

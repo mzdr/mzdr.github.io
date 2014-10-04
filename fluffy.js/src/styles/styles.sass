@@ -4,7 +4,10 @@
   margin: 0
   padding: 0
 
-a, pre, p, li
+a,
+pre,
+p,
+li
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
@@ -19,15 +22,6 @@ body
   font-weight: 400
   padding: 3em 0
   text-rendering: optimizeLegibility
-
-.grid
-  max-width: 960px
-  width: 96%
-  margin: 3em auto 5em
-
-.pb
-  margin-bottom: 0
-  padding-bottom: 5em
 
 a
   text-decoration: none
@@ -49,25 +43,10 @@ p
   margin: 2.5em 20px 0
   line-height: 1.5em
 
-.list-dash
-  list-style-type: none
-  margin: 2.5em 20px 0
-  padding-left: 0
-
-  li
-    margin-top: 0.75em
-    padding-left: 1.25em
-    position: relative
-
-    &::before
-      content: "\2013"
-      left: 0
-      position: absolute
-      top: 0
-
 pre
-  border-radius: 2px
   background-color: rgba(255, 255, 255, 0.05)
+  border-radius: 2px
+  color: rgba(220, 220, 220, 0.5)
   font-family: "Inconsolata", monospace
   font-size: 17px
   font-weight: bold
@@ -77,6 +56,9 @@ pre
   padding: 0.75em 1em
 
   -webkit-overflow-scrolling: touch
+
+  em
+    font-style: normal
 
 strong
   font-weight: 600
@@ -96,3 +78,28 @@ h2
   font-size: 1.5em
   margin: 3em auto 0.75em
   padding: 0 20px 1em
+
+.list-dash
+  list-style-type: none
+  margin: 2.5em 20px 0
+  padding-left: 0
+
+  li
+    margin-top: 0.75em
+    padding-left: 1.25em
+    position: relative
+
+    &::before
+      content: "\2013"
+      left: 0
+      position: absolute
+      top: 0
+
+.grid
+  max-width: 960px
+  width: 96%
+  margin: 3em auto 5em
+
+.pb
+  margin-bottom: 0
+  padding-bottom: 5em
