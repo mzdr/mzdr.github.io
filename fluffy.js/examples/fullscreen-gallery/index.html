@@ -7,13 +7,17 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/fluffy.js/assets/css/styles.css">
-    <link rel="stylesheet" href="/fluffy.js/assets/css/fluffy.min.css">
+    <!-- <link rel="stylesheet" href="/fluffy.js/assets/css/fluffy.min.css"> -->
+    <link rel="stylesheet" href="http://local.dev/fluffy.js/src/fluffy.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,400italic,600;Inconsolata">
     <style>
         body {
             padding: 0
         }
-        .fluffy-container {
+        a {
+            text-shadow: none;
+        }
+        [data-fluffy-container] {
             height: 100%
         }
         .overlay {
@@ -48,20 +52,17 @@
     </script>
 </head>
 <body>
-    <div id="fluffy-container" class="fluffy-container is-loading">
-        <div id="fluffy-stage" class="fluffy-stage">
-            <div id="fluffy-content" class="fluffy-content">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/1.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/2.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/3.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/4.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/5.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/6.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/7.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/8.jpg" alt="">
-            </div>
+    <div data-fluffy-container>
+        <div data-fluffy-content>
+            <img src="/fluffy.js/assets/images/1.jpg" alt="">
+            <img src="/fluffy.js/assets/images/2.jpg" alt="">
+            <img src="/fluffy.js/assets/images/3.jpg" alt="">
+            <img src="/fluffy.js/assets/images/4.jpg" alt="">
+            <img src="/fluffy.js/assets/images/5.jpg" alt="">
+            <img src="/fluffy.js/assets/images/6.jpg" alt="">
+            <img src="/fluffy.js/assets/images/7.jpg" alt="">
+            <img src="/fluffy.js/assets/images/8.jpg" alt="">
         </div>
-        <div id="fluffy-scrollbar" class="fluffy-scrollbar"></div>
         <div class="overlay">
             <h2>Fullscreen gallery</h2>
             <p>Imagine presenting your portfolio like this. Your content gets the right attention it deserves!<br>And it's not just about the pictures, you can use any content you like!</p>
@@ -70,7 +71,6 @@
     </div>
 
 
-    <script src="/fluffy.js/assets/js/fluffy.min.js"></script>
-    <script>Fluffy.init();</script>
+    <script src="http://local.dev/fluffy.js/src/fluffy.js"></script>
 </body>
 </html>

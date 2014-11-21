@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Fluffy.js</title>
     <meta name="author" content="Sebastian Prein">
-    <meta name="description" content="A simple, light and flexible JavaScript library that empowers you, to create content that anyone can interact with in a real fluffy way.">
+    <meta name="description" content="A simple, light and flexible JavaScript library that makes sure your content – no matter how big it is – will fit in any screen!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/fluffy.js/assets/css/styles.css">
     <link rel="stylesheet" href="/fluffy.js/assets/css/fluffy.min.css">
@@ -24,26 +24,23 @@
 <body>
     <header class="grid">
         <h1>Fluffy.js</h1>
-        <p>A simple, light and flexible JavaScript library that empowers you, to create content that anyone can interact with in a real fluffy way.</p>
+        <p style="text-align: center;">A simple, light and flexible JavaScript library<br>that makes sure your content &ndash; no matter how big it is &ndash; will fit in any screen!</p>
     </header>
-    <div id="fluffy-container" class="fluffy-container is-loading">
-        <div id="fluffy-stage" class="fluffy-stage">
-            <div id="fluffy-content" class="fluffy-content">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/1.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/2.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/3.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/4.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/5.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/6.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/7.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/8.jpg" alt="">
-            </div>
+    <div data-fluffy-container>
+        <div data-fluffy-content>
+            <img src="/fluffy.js/assets/images/1.jpg" alt="">
+            <img src="/fluffy.js/assets/images/2.jpg" alt="">
+            <img src="/fluffy.js/assets/images/3.jpg" alt="">
+            <img src="/fluffy.js/assets/images/4.jpg" alt="">
+            <img src="/fluffy.js/assets/images/5.jpg" alt="">
+            <img src="/fluffy.js/assets/images/6.jpg" alt="">
+            <img src="/fluffy.js/assets/images/7.jpg" alt="">
+            <img src="/fluffy.js/assets/images/8.jpg" alt="">
         </div>
-        <div id="fluffy-scrollbar" class="fluffy-scrollbar"></div>
     </div>
 
     <section class="grid">
-        <p><strong>Fluffy can be many things!</strong> It could be a portfolio, a slideshow, a gallery, a tool for interactive exploration or just a simple way helping you to fit lots of content into a small screen.</p>
+        <p><strong>Fluffy can be many things!</strong> It could be a portfolio, a slideshow, a gallery, a tool for interactive exploration or just a simple way helping you to fit lots of content into any screen.</p>
         <p>Checkout the <a href="#/examples/">examples</a> to get a glimpse of some of the possibilities Fluffy has to offer.</p>
     </section>
 
@@ -54,52 +51,76 @@
 
     <section class="grid">
         <h2 id="/usage/">Usage</h2>
-        <p><strong>Fluffy is plain JavaScript!</strong> There's no need for heavy frameworks like jQuery or similar. It's totally fluid responsive, touch device friendly, super easy to customize and weights about <strong>9KB</strong> only.</p>
-        <p>Just download the latest version over <a href="http://github.com/mzdr/fluffy.js">here</a> and move it to your project. In your HTML file, where you want to have your fluffy area, make sure your markup looks basically like this:</p>
-        <pre>&lt;div <em>id="fluffy-container" class="fluffy-container is-loading"</em>&gt;&#10;    &lt;div <em>id="fluffy-stage" class="fluffy-stage"</em>&gt;&#10;        &lt;ul <em>id="fluffy-content" class="fluffy-content"</em>&gt;&#10;            &lt;li <em>class="fluffy-item"</em>&gt;&#10;                &lt;!-- your content --&gt;&#10;            &lt;/li&gt;&#10;            &hellip;&#10;        &lt;/ul&gt;&#10;    &lt;/div&gt;&#10;    &lt;div <em>id="fluffy-scrollbar" class="fluffy-scrollbar"</em>&gt;&lt;/div&gt;&#10;&lt;/div&gt;</pre>
-        <p>All IDs (<code>#fluffy-*</code>) are used to grab the respective DOM elements by the JavaScript logic. You can use different IDs, just remember to tell Fluffy which selectors it should look for. Feel free to adjust any class used by Fluffy to your liking, but be careful as you might break something.</p>
-        <p>If everything is set up just include the almighty magic and you're ready to go. &nbsp;&mdash;&nbsp; <em>Don't forget to adjust the paths!</em></p>
-        <pre>&lt;link rel="stylesheet" href="path/to/<em>fluffy.min.css</em>"&gt;&#10;&lt;script src="path/to/<em>fluffy.min.js</em>"&gt;&lt;/script&gt;&#10;&lt;script&gt;<em>Fluffy.init(</em>{ options }<em>);</em>&lt;/script&gt;</pre>
+        <p><strong>Fluffy is plain JavaScript!</strong> There's no need for heavy frameworks like jQuery or similar. It automatically adapts to any screensize, is touch device friendly, super easy to customize and weights about <strong>8KB</strong> only.</p>
+
+        <p>To get started just download the latest stable version and move all the files from the zip archive to the respective folder in your project. When you've done that, go on!</p>
+
+        <p>Now let me explain you how Fluffy works. Everything that is related to it gets into the Fluffy container.</p>
+
+        <pre>&lt;div <em>data-fluffy-container</em>&gt;&#10;    &hellip;&#10;&lt;/div&gt;</pre>
+
+        <p>This helps Fluffy to correctly inject elements and classes for several states of execution. You can use an existing element or create a new one, all it needs is the <code>data-fluffy-container</code> attribute.</p>
+
+        <p>Your actual content is an element with the <code>data-fluffy-content</code> attribute.</p>
+
+        <pre>&lt;div <em>data-fluffy-container</em>&gt;&#10;    &lt;div <em>data-fluffy-content</em>&gt;&#10;        &lt;!-- your content --&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;&#10;</pre>
+
+        <p>Well, that's almost it. All that's left is the almighty magic and a little bit of styling, which is by the way just a real basic styling to have a minimal visual feedback at least. Feel free to do whatever you like with it!</p>
+        <pre>&lt;link rel="stylesheet" href="path/to/<em>fluffy.min.css</em>"&gt;&#10;&lt;script src="path/to/<em>fluffy.min.js</em>"&gt;&lt;/script&gt;</pre>
+
+        <p><strong>That's it!</strong> Open your browser and see for yourself!</p>
     </section>
 
     <section class="grid">
         <h2 id="/options/">Options</h2>
-        <p>This list shows all the available options and their default values.</p>
-        <p>The overall Fluffy container holding everything together.</p>
-        <pre><em>containerSelector:</em> '#fluffy-container'</pre>
+        <p>Since each Fluffy container is an instance on its own you're able to customize each one independently with the <code>data-fluffy-options='…'</code> attribute. This takes a <strong>JSON</strong> string with all of the options you want to change.</p>
 
-        <p>The selector for the actual content.</p>
-        <pre><em>contentSelector:</em> '#fluffy-content'</pre>
+        <p>For example if you don't want to have scrollbars and a separate trigger instead, it would look like this:</p>
 
-        <p>Enable debugging in case the output isn't as expected. See your browsers console for more information.</p>
-        <pre><em>debug:</em> false</pre>
+        <pre>&lt;div <em>data-fluffy-container</em>&#10;     <em>data-fluffy-options='{"showScrollbars": false, "triggerSelector": "#my-trigger"}'</em>&gt;&#10;    &lt;div <em>data-fluffy-content</em>&gt;&#10;        &lt;!-- your content --&gt;&#10;    &lt;/div&gt;&#10;&lt;/div&gt;</pre>
 
-        <p>Selector to pick items, if none given all children in the content container will be picked.</p>
-        <pre><em>itemSelector:</em> null</pre>
-
-        <p>Selector for the scrollbar.</p>
-        <pre><em>scrollbarSelector:</em> '#fluffy-scrollbar'</pre>
-
-        <p>Displays the current position within the scrollable content in form of a scrollbar.</p>
-        <pre><em>showScrollbar:</em> true</pre>
-
-        <p>Automatically adjust the height of the content container either relative to the smallest or tallest element found. Allowed values: <em>false</em>, <em>'tallest'</em>, <em>'smallest'</em>.</p>
-        <pre><em>smartHeight:</em> false</pre>
-
-        <p>The stage holding the scrollable content.</p>
-        <pre><em>stageSelector:</em> '#fluffy-stage'</pre>
-
-        <p>If no trigger selector is given, the Fluffy container is also the trigger area.</p>
-        <pre><em>triggerSelector:</em> null</pre>
-
-        <p>Define which axis to trigger movement for. Allowed values: <em>x</em>, <em>y</em>, <em>xy</em>.</p>
-        <pre><em>triggerDirection:</em> 'x'</pre>
-
-        <p>The higher the value the more lazier the reaction to the mouse movement will be.</p>
-        <pre><em>mouseDamp:</em> 20</pre>
-
-        <p>Adds space (in pixel) to the trigger area where no action happens.</p>
-        <pre><em>mousePadding:</em> 60</pre>
+        <table>
+            <tr>
+                <th>Option</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>triggerSelector</td>
+                <td>null</td>
+                <td>Defines a separate element which is used to trigger the actual interaction with the Fluffy content. If the target element doesn't exist, the <em>container</em> will be used as fallback/default.<br><br>Allowed values: '<em>[any valid CSS selector]</em>'<br>Examples: <em>'#my-trigger'</em>, <em>'#sample > li:nth-child(8) a + img'</em></td>
+            </tr>
+            <tr>
+                <td>showScrollbars</td>
+                <td>true</td>
+                <td>Displays the current position within the scrollable content in forms of scrollbars.<br><br>Allowed values: <em>true</em>, <em>false</em></td>
+            </tr>
+            <tr>
+                <td>smartHeight</td>
+                <td>false</td>
+                <td>Automatically adjust the height of the content container according to the smallest, largest or the average height of all items found.<br><br>Allowed values: <em>false</em>, <em>'smallest'</em>, <em>'average'</em>, <em>'largest'</em>.</td>
+            </tr>
+            <tr>
+                <td>smartWidth</td>
+                <td>false</td>
+                <td>See <em>smartHeight</em>, just for <em>width</em> this time.</td>
+            </tr>
+            <tr>
+                <td>triggerDirection</td>
+                <td>'x'</td>
+                <td>Define which axis to trigger movement for.<br><br>Allowed values: <em>'x'</em>, <em>'y'</em>, <em>'xy'</em>.</td>
+            </tr>
+            <tr>
+                <td>mouseDamp</td>
+                <td>20</td>
+                <td>The higher the value the more lazier the reaction to the mouse movement will be.<br><br>Allowed values: <em>[any positive number]</em></td>
+            </tr>
+            <tr>
+                <td>mousePadding</td>
+                <td>60</td>
+                <td>Adds space (in pixel) to the trigger area where no action happens.<br><br>Allowed values: <em>[any positive number]</em></td>
+            </tr>
+        </table>
     </section>
 
     <section class="grid">
@@ -109,7 +130,7 @@
             <li>Google Chrome <strong>37</strong></li>
             <li>Mozilla Firefox <strong>31</strong></li>
             <li>Safari <strong>7</strong></li>
-            <li>Windows Internet Explorer <strong>9 &ndash; 10</strong></li>
+            <li>Internet Explorer <strong>10</strong></li>
             <li>Android Browser <strong>4.3</strong></li>
             <li>iOS Safari <strong>7.1</strong></li>
         </ul>
@@ -119,7 +140,6 @@
         <h2 id="/examples/">Examples</h2>
         <ul class="list-dash">
             <li><a href="/fluffy.js/examples/fullscreen-gallery/">A fullscreen gallery</a></li>
-            <li><a href="/fluffy.js/examples/fluid-slider/">A simple fluid slider</a></li>
             <li><a href="/fluffy.js/examples/fixed-banderole/">A fixed height banderole</a></li>
             <li><a href="/fluffy.js/examples/separate-trigger/">With a separate trigger area</a></li>
             <li><a href="/fluffy.js/examples/big-picture/">Big picture exploration</a></li>
@@ -127,6 +147,5 @@
     </section>
 
     <script src="/fluffy.js/assets/js/fluffy.min.js"></script>
-    <script>Fluffy.init();</script>
 </body>
 </html>

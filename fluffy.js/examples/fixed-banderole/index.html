@@ -13,7 +13,7 @@
         body {
             padding: 0;
         }
-        .fluffy-container {
+        [data-fluffy-container] {
             height: 300px;
             margin: auto;
             max-width: 100%;
@@ -35,20 +35,17 @@
     </script>
 </head>
 <body>
-    <div id="fluffy-container" class="fluffy-container is-loading">
-        <div id="fluffy-stage" class="fluffy-stage">
-            <div id="fluffy-content" class="fluffy-content">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/1.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/2.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/3.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/4.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/5.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/6.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/7.jpg" alt="">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/8.jpg" alt="">
-            </div>
+    <div data-fluffy-container>
+        <div data-fluffy-content>
+            <img src="/fluffy.js/assets/images/1.jpg" alt="">
+            <img src="/fluffy.js/assets/images/2.jpg" alt="">
+            <img src="/fluffy.js/assets/images/3.jpg" alt="">
+            <img src="/fluffy.js/assets/images/4.jpg" alt="">
+            <img src="/fluffy.js/assets/images/5.jpg" alt="">
+            <img src="/fluffy.js/assets/images/6.jpg" alt="">
+            <img src="/fluffy.js/assets/images/7.jpg" alt="">
+            <img src="/fluffy.js/assets/images/8.jpg" alt="">
         </div>
-        <div id="fluffy-scrollbar" class="fluffy-scrollbar"></div>
     </div>
 
     <div class="grid">
@@ -58,6 +55,5 @@
     </div>
 
     <script src="/fluffy.js/assets/js/fluffy.min.js"></script>
-    <script>Fluffy.init();</script>
 </body>
 </html>

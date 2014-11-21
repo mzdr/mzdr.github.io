@@ -13,10 +13,10 @@
         body {
             padding: 0;
         }
-        .fluffy-container {
+        [data-fluffy-container] {
             height: 100%;
         }
-        .fluffy-item {
+        [data-fluffy-container] img {
             height: auto;
         }
         a {
@@ -26,6 +26,7 @@
             padding: 6px 20px 10px;
             position: absolute;
             text-decoration: none;
+            text-shadow: none;
             top: 5%;
         }
     </style>
@@ -41,18 +42,14 @@
     </script>
 </head>
 <body>
-    <div id="fluffy-container" class="fluffy-container is-loading">
-        <div id="fluffy-stage" class="fluffy-stage">
-            <div id="fluffy-content" class="fluffy-content">
-                <img class="fluffy-item" src="/fluffy.js/assets/images/world.topo.bathy.200412.3x5400x2700.jpg" alt="http://visibleearth.nasa.gov/view.php?id=73909">
-            </div>
+    <div data-fluffy-container data-fluffy-options='{"triggerDirection": "xy"}'>
+        <div data-fluffy-content>
+            <img class="fluffy-item" src="/fluffy.js/assets/images/world.topo.bathy.200412.3x5400x2700.jpg" alt="http://visibleearth.nasa.gov/view.php?id=73909">
         </div>
-        <div id="fluffy-scrollbar" class="fluffy-scrollbar"></div>
         <a class="back" href="/fluffy.js/">Back</a>
     </div>
 
 
     <script src="/fluffy.js/assets/js/fluffy.min.js"></script>
-    <script>Fluffy.init({ triggerDirection: 'xy' });</script>
 </body>
 </html>
