@@ -13,7 +13,7 @@
         <header class="site-header">
             <span class="logo gimme-seizure -hardcore -ne">Resolution Tester 9000</span>
             <div class="url">
-                <input type="url" id="url" class="plain-input" placeholder="https://www.google.com/" autofocus>
+                <input type="url" id="url" class="plain-input" placeholder="http://www.cnn.com/" autofocus>
             </div>
             <button class="addscreen plain-button gimme-seizure -hardcore -nw"
                     onclick="document.getElementById('factory').classList.add('visible')">Gimme Screens!</button>
@@ -84,12 +84,17 @@
             <button type="button" class="close plain-button gimme-seizure -hardcore" onclick="this.parentNode.classList.remove('visible')">&times;</button>
         </form>
 
-        <form class="simple-overlay" id="about">
+        <form class="simple-overlay visible" id="about">
             <p><strong>What's that all about?</strong></p>
             <p>Well it's just a real simple (and stupid) way to test a website against several resolutions. It doesn't emulate the operating system of devices or anything like that &mdash; just the plain resolution.</p>
             <p>I just wanted to have a fast and easy tool to quickly test several resolutions, take screenshots of them and show it to the customer or whatever use case there might be.</p>
-            <p>Hope you'll get a use out of it! If anything feels wrong, feel free to get in touch with me!</p>
+            <p><strong>It doesn't work!</strong></p>
+            <p>Some sites refuse to be displayed within an iframe by setting the <em>X-Frame-Options</em>. There is nothing you/we can do about it. Another case is <em>mixed active content</em>, which means that if you open the RT9000 from a https source, you can't load non-https urls.</p>
+            <p>C'est la vie! ¯\_(ツ)_/¯</p>
+            <p>Anyways&hellip; I hope you'll get a use out of it! If anything feels wrong, feel free to get in touch with me!</p>
             <p>Cheers,<br>Basti</p>
+            <br>
+            <strong>Ultra-Super-Pro-Tip:</strong> Just save the RT9000 (File &rarr; Save) to your computer and open it locally, that way you won't have mixed content problems.
             <button type="button" class="close plain-button gimme-seizure -hardcore" onclick="this.parentNode.classList.remove('visible')">&times;</button>
         </form>
 
