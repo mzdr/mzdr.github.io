@@ -3,8 +3,13 @@
 
 # TEAM
 
-    Sebastian Prein -- @mrprein
+    <name> -- <role> -- <twitter>
+
+# THANKS
+
+    <name>
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5, Normalize.css, ES6, Babel
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css

@@ -6,7 +6,7 @@
         <title>Resolution Tester 9000&trade;</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/styles/styles.css">
+        <link rel="stylesheet" href="assets/styles/styles.css?1.1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Roboto:400,700">
     </head>
     <body>
@@ -21,65 +21,97 @@
 
         <main class="site-output" id="output"></main>
 
-        <form class="simple-overlay" id="factory">
-            <label class="device-picker">
-                <input value='{"width":272,"height":340,"label":" Watch 38mm"}' class="checkbox" type="checkbox" name="device[]">
-                <span class="label"> Watch 38mm</span>
-            </label>
-            <label class="device-picker">
-                <input value='{"width":312,"height":390,"label":" Watch 42mm"}' class="checkbox" type="checkbox" name="device[]">
-                <span class="label"> Watch 42mm</span>
-            </label>
-
-            <label class="device-picker">
-                <input value='{"width":320,"height":480,"label":"iPhone 4, 4S"}' class="checkbox" type="checkbox" name="device[]">
-                <span class="label">iPhone 4, 4S</span>
-            </label>
-            <label class="device-picker">
-                <input value='{"width":320,"height":568,"label":"iPhone 5"}' class="checkbox" type="checkbox" name="device[]">
-                <span class="label">iPhone 5</span>
-            </label>
-            <label class="device-picker">
-                <input value='{"width":375,"height":667,"label":"iPhone 6"}' class="checkbox" type="checkbox" name="device[]">
-                <span class="label">iPhone 6</span>
-            </label>
-            <label class="device-picker">
-                <input value='{"width":414,"height":736,"label":"iPhone 6 Plus"}' class="checkbox" type="checkbox" name="device[]">
-                <span class="label">iPhone 6 Plus</span>
-            </label>
-            <label class="device-picker">
-                <input value='{"width":768,"height":1024,"label":"iPad Mini / Air"}' class="checkbox" type="checkbox" name="device[]">
-                <span class="label">iPad Mini / Air</span>
-            </label>
-            <label class="device-picker">
-                <input value='{"width":1024,"height":1366,"label":"iPad Pro"}' class="checkbox" type="checkbox" name="device[]">
-                <span class="label">iPad Pro</span>
-            </label>
-            <label class="device-picker">
-                <input value='{"width":640,"height":480}' class="checkbox" type="checkbox" name="device[]">
-                <span class="label">480p</span>
-            </label>
-            <label class="device-picker">
-                <input value='{"width":1280,"height":720,"label":"HD (720p)"}' class="checkbox" type="checkbox" name="device[]">
-                <span class="label">720p</span>
-            </label>
-            <label class="device-picker">
-                <input value='{"width":1280,"height":800,"label":"13\" Retina MacBook Pro"}' class="checkbox" type="checkbox" name="device[]">
-                <span class="label">13" Retina MacBook Pro</span>
-            </label>
-            <label class="device-picker">
-                <input value='{"width":1440,"height":900,"label":"15\" Retina MacBook Pro"}' class="checkbox" type="checkbox" name="device[]">
-                <span class="label">15" Retina MacBook Pro</span>
-            </label>
-            <label class="device-picker">
-                <input value='{"width":1920,"height":1080,"label":"Full HD (1080p)"}' class="checkbox" type="checkbox" name="device[]">
-                <span class="label">Full-HD (1080p)</span>
-            </label>
-            <label class="device-picker">
-                <input value='{"width":3840,"height":2160,"label":"4K UHD (2160p)"}' class="checkbox" type="checkbox" name="device[]">
-                <span class="label">4K UHD (2160p)</span>
-            </label>
-
+        <form class="simple-overlay" id="factory" novalidate>
+            <fieldset class="device-group">
+                <legend class="legend">Wearables</legend>
+                <label class="device-picker">
+                    <input value='{"width":272,"height":340,"label":" Watch 38mm"}' class="checkbox" type="checkbox">
+                    <span class="label"> Watch 38mm</span>
+                </label>
+                <label class="device-picker">
+                    <input value='{"width":312,"height":390,"label":" Watch 42mm"}' class="checkbox" type="checkbox">
+                    <span class="label"> Watch 42mm</span>
+                </label>
+            </fieldset>
+            <fieldset class="device-group">
+                <legend class="legend">Mobile</legend>
+                <label class="device-picker">
+                    <input value='{"width":320,"height":480,"label":"iPhone 4, 4s"}' class="checkbox" type="checkbox">
+                    <span class="label">iPhone 4, 4s</span>
+                </label>
+                <label class="device-picker">
+                    <input value='{"width":320,"height":568,"label":"iPhone 5, 5s"}' class="checkbox" type="checkbox">
+                    <span class="label">iPhone 5, 5s</span>
+                </label>
+                <label class="device-picker">
+                    <input value='{"width":375,"height":667,"label":"iPhone 6"}' class="checkbox" type="checkbox">
+                    <span class="label">iPhone 6</span>
+                </label>
+                <label class="device-picker">
+                    <input value='{"width":414,"height":736,"label":"iPhone 6 Plus"}' class="checkbox" type="checkbox">
+                    <span class="label">iPhone 6 Plus</span>
+                </label>
+            </fieldset>
+            <fieldset class="device-group">
+                <legend class="legend">Tablet</legend>
+                <label class="device-picker">
+                    <input value='{"width":768,"height":1024,"label":"iPad Mini / Air"}' class="checkbox" type="checkbox">
+                    <span class="label">iPad Mini / Air</span>
+                </label>
+                <label class="device-picker">
+                    <input value='{"width":1024,"height":1366,"label":"iPad Pro"}' class="checkbox" type="checkbox">
+                    <span class="label">iPad Pro</span>
+                </label>
+            </fieldset>
+            <fieldset class="device-group">
+                <legend class="legend">Desktop</legend>
+                <label class="device-picker">
+                    <input value='{"width":1366,"height":768,"label":"13\" MacBook Pro"}' class="checkbox" type="checkbox">
+                    <span class="label">11" MacBook Air</span>
+                </label>
+                <label class="device-picker">
+                    <input value='{"width":1280,"height":800,"label":"13\" MacBook Pro"}' class="checkbox" type="checkbox">
+                    <span class="label">13" MacBook Pro</span>
+                </label>
+                <label class="device-picker">
+                    <input value='{"width":1440,"height":900,"label":"15\" MacBook Pro"}' class="checkbox" type="checkbox">
+                    <span class="label">15" MacBook Pro</span>
+                </label>
+            </fieldset>
+            <fieldset class="device-group">
+                <legend class="legend">Film</legend>
+                <label class="device-picker">
+                    <input value='{"width":640,"height":480,"label":"SD (480p)"}' class="checkbox" type="checkbox">
+                    <span class="label">SD (480p)</span>
+                </label>
+                <label class="device-picker">
+                    <input value='{"width":1280,"height":720,"label":"HD (720p)"}' class="checkbox" type="checkbox">
+                    <span class="label">HD (720p)</span>
+                </label>
+                <label class="device-picker">
+                    <input value='{"width":1920,"height":1080,"label":"Full HD (1080p)"}' class="checkbox" type="checkbox">
+                    <span class="label">Full HD (1080p)</span>
+                </label>
+                <label class="device-picker">
+                    <input value='{"width":3840,"height":2160,"label":"4K UHD (2160p)"}' class="checkbox" type="checkbox">
+                    <span class="label">4K UHD (2160p)</span>
+                </label>
+            </fieldset>
+            <fieldset class="device-group">
+                <legend class="legend">Custom</legend>
+                <label class="smart-input">
+                    <input class="plain-input input" type="text" name="width" placeholder="1024px" required>
+                    <span class="label">Width</span>
+                </label>
+                <label class="smart-input">
+                    <input class="plain-input input" type="text" name="height" placeholder="768px" required>
+                    <span class="label">Height</span>
+                </label>
+                <label class="smart-input">
+                    <input class="plain-input input" type="text" name="label" placeholder="My computer&hellip;" required>
+                    <span class="label">Device name</span>
+                </label>
+            </fieldset>
             <button class="submit plain-button gimme-seizure -hardcore">Add'em!</button>
             <button type="button" class="close plain-button gimme-seizure -hardcore" onclick="this.parentNode.classList.remove('visible')">&times;</button>
         </form>
