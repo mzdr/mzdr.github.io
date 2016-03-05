@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Resolution Tester 9000&trade;</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/styles/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Roboto:400,700">
+    </head>
+    <body>
+        <header class="site-header">
+            <span class="logo gimme-seizure -hardcore -ne">Resolution Tester 9000</span>
+            <div class="url">
+                <input type="url" id="url" class="plain-input" placeholder="https://www.google.com/" autofocus>
+            </div>
+            <button class="addscreen plain-button gimme-seizure -hardcore -nw"
+                    onclick="document.getElementById('factory').classList.add('visible')">Gimme Screens!</button>
+        </header>
+
+        <main class="site-output" id="output"></main>
+
+        <form class="simple-overlay" id="factory">
+            <label class="device-picker">
+                <input value='{"width":272,"height":340,"label":" Watch 38mm"}' class="checkbox" type="checkbox" name="device[]">
+                <span class="label"> Watch 38mm</span>
+            </label>
+            <label class="device-picker">
+                <input value='{"width":312,"height":390,"label":" Watch 42mm"}' class="checkbox" type="checkbox" name="device[]">
+                <span class="label"> Watch 42mm</span>
+            </label>
+
+            <label class="device-picker">
+                <input value='{"width":320,"height":480,"label":"iPhone 4, 4S"}' class="checkbox" type="checkbox" name="device[]">
+                <span class="label">iPhone 4, 4S</span>
+            </label>
+            <label class="device-picker">
+                <input value='{"width":320,"height":568,"label":"iPhone 5"}' class="checkbox" type="checkbox" name="device[]">
+                <span class="label">iPhone 5</span>
+            </label>
+            <label class="device-picker">
+                <input value='{"width":375,"height":667,"label":"iPhone 6"}' class="checkbox" type="checkbox" name="device[]">
+                <span class="label">iPhone 6</span>
+            </label>
+            <label class="device-picker">
+                <input value='{"width":414,"height":736,"label":"iPhone 6 Plus"}' class="checkbox" type="checkbox" name="device[]">
+                <span class="label">iPhone 6 Plus</span>
+            </label>
+            <label class="device-picker">
+                <input value='{"width":768,"height":1024,"label":"iPad Mini / Air"}' class="checkbox" type="checkbox" name="device[]">
+                <span class="label">iPad Mini / Air</span>
+            </label>
+            <label class="device-picker">
+                <input value='{"width":1024,"height":1366,"label":"iPad Pro"}' class="checkbox" type="checkbox" name="device[]">
+                <span class="label">iPad Pro</span>
+            </label>
+            <label class="device-picker">
+                <input value='{"width":640,"height":480}' class="checkbox" type="checkbox" name="device[]">
+                <span class="label">480p</span>
+            </label>
+            <label class="device-picker">
+                <input value='{"width":1280,"height":720,"label":"HD (720p)"}' class="checkbox" type="checkbox" name="device[]">
+                <span class="label">720p</span>
+            </label>
+            <label class="device-picker">
+                <input value='{"width":1280,"height":800,"label":"13\" Retina MacBook Pro"}' class="checkbox" type="checkbox" name="device[]">
+                <span class="label">13" Retina MacBook Pro</span>
+            </label>
+            <label class="device-picker">
+                <input value='{"width":1440,"height":900,"label":"15\" Retina MacBook Pro"}' class="checkbox" type="checkbox" name="device[]">
+                <span class="label">15" Retina MacBook Pro</span>
+            </label>
+            <label class="device-picker">
+                <input value='{"width":1920,"height":1080,"label":"Full HD (1080p)"}' class="checkbox" type="checkbox" name="device[]">
+                <span class="label">Full-HD (1080p)</span>
+            </label>
+            <label class="device-picker">
+                <input value='{"width":3840,"height":2160,"label":"4K UHD (2160p)"}' class="checkbox" type="checkbox" name="device[]">
+                <span class="label">4K UHD (2160p)</span>
+            </label>
+
+            <button class="submit plain-button gimme-seizure -hardcore">Add'em!</button>
+            <button type="button" class="close plain-button gimme-seizure -hardcore" onclick="this.parentNode.classList.remove('visible')">&times;</button>
+        </form>
+
+        <form class="simple-overlay" id="about">
+            <p><strong>What's that all about?</strong></p>
+            <p>Well it's just a real simple (and stupid) way to test a website against several resolutions. It doesn't emulate the operating system of devices or anything like that &mdash; just the plain resolution.</p>
+            <p>I just wanted to have a fast and easy tool to quickly test several resolutions, take screenshots of them and show it to the customer or whatever use case there might be.</p>
+            <p>Hope you'll get a use out of it! If anything feels wrong, feel free to get in touch with me!</p>
+            <p>Cheers,<br>Basti</p>
+            <button type="button" class="close plain-button gimme-seizure -hardcore" onclick="this.parentNode.classList.remove('visible')">&times;</button>
+        </form>
+
+        <footer class="site-footer">
+            <span class="link" onclick="document.getElementById('about').classList.add('visible')"><svg width="24" height="24" viewBox="0 0 446 894" xmlns="http://www.w3.org/2000/svg"><title>info</title><path d="M56 446.5H0v-111h335v390c0 16 5.5 29.333 16.5 40 11 10.667 24.167 16 39.5 16h55v112H0v-112h56c15.333 0 28.5-5.333 39.5-16s16.5-24 16.5-40v-223c0-16-5.333-29.333-16-40-10.667-10.667-24-16-40-16zM112 112C112 37.667 149.167.5 223.5.5S335 37.667 335 112s-37.167 111.5-111.5 111.5S112 186.333 112 112z" fill="#000" fill-rule="evenodd"/></svg></span>
+            <a class="link" href="https://github.com/mzdr/" title="github.com/mzdr"><svg height="24" version="1.1" viewBox="0 0 16 16" width="24"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"></path></svg></a>
+            <a class="link" href="https://twitter.com/mrprein" title="twitter.com/mrprein" style="top: 1px"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 182.66667 150.66667"><defs><clipPath id="a"><path d="M0 10.012h1366.9v1110.9H0z"/></clipPath></defs><g clip-path="url(#a)" transform="matrix(.1333 0 0 -.1333 0 150.67)"><path d="M1366.9 989.39c-50.27-22.31-104.33-37.387-161.05-44.18 57.89 34.723 102.34 89.68 123.28 155.15-54.18-32.15-114.18-55.47-178.09-68.04-51.13 54.49-124.02 88.55-204.68 88.55-154.89 0-280.43-125.55-280.43-280.43 0-21.988 2.457-43.398 7.258-63.91-233.08 11.68-439.72 123.36-578.04 293.01-24.14-41.4-37.97-89.567-37.97-140.97 0-97.308 49.49-183.13 124.76-233.44-45.968 1.437-89.217 14.058-127.03 35.078-.042-1.18-.042-2.348-.042-3.52 0-135.9 96.68-249.22 224.96-275-23.512-6.41-48.28-9.8-73.86-9.8-18.09 0-35.628 1.71-52.78 5 35.71-111.41 139.26-192.5 262-194.77-96.06-75.23-216.96-120.04-348.36-120.04-22.622 0-44.962 1.332-66.92 3.91 124.16-79.568 271.55-125.98 429.94-125.98 515.82 0 797.86 427.31 797.86 797.93 0 12.153-.28 24.223-.79 36.25 54.77 39.57 102.31 88.95 139.93 145.2" fill="#000"/></g></svg></a>
+        </footer>
+
+        <script src="assets/scripts/App.js" charset="utf-8"></script>
+    </body>
+</html>

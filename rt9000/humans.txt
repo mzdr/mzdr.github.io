@@ -1,0 +1,10 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Sebastian Prein -- @mrprein
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, Normalize.css, ES6, Babel
