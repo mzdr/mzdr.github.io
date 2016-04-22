@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Convert any character to its unicode representation to use as a CSS content property.">
+    <title>Any character 2 CSS content</title>
+    <style>
+        * {
+            font-size: 32px;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        body {
+            left: 5%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 90%;
+        }
+
+        #input {
+            border: 2px solid #f0f0f0;
+            outline: 0;
+            padding: 0.75em;
+            transition: border 1s;
+        }
+
+        #input:focus {
+            border-color: #0099ff;
+        }
+
+        #output {
+            margin: 2em 0 0;
+        }
+
+        #output:empty::before {
+            content: '""';
+        }
+
+    </style>
+</head>
+<body>
+    <input id="input" type="text" value="Hi! &#x1f601;" autofocus onclick="this.select()">
+    <p id="output">"\48" "\69" "\21" "\20" "\1f601"</p>
+
+    <script>
+        var input = document.getElementById('input');
+        var output = document.getElementById('output');
+
+        input.select();
+
+        input.addEventListener('keyup', function(e) {
+            var escaped = [];
+
+            for (var char of input.value) {
+                escaped.push('"\\' + char.codePointAt().toString(16) + '"');
+            }
+
+            output.textContent = escaped.join(' ');
+        });
+    </script>
+</body>
+</html>
