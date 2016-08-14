@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html class="fluffyjs">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fluffy.js &ndash; Separate trigger</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/fluffy.js/assets/css/styles.css">
-    <link rel="stylesheet" href="/fluffy.js/assets/css/fluffy.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/node_modules/fluffy.js/dist/fluffy.min.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,400italic,600;Inconsolata">
     <style>
         body {
@@ -32,28 +32,18 @@
             content: "There's no trigger area on touch devices! Just swipe 'em!";
         }
     </style>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-12961239-6', 'auto');
-      ga('send', 'pageview');
-
-    </script>
 </head>
 <body>
     <div data-fluffy-container data-fluffy-options='{"triggerSelector": "#my-trigger"}'>
             <div data-fluffy-content>
-                <img src="/fluffy.js/assets/images/1.jpg" alt="">
-                <img src="/fluffy.js/assets/images/2.jpg" alt="">
-                <img src="/fluffy.js/assets/images/3.jpg" alt="">
-                <img src="/fluffy.js/assets/images/4.jpg" alt="">
-                <img src="/fluffy.js/assets/images/5.jpg" alt="">
-                <img src="/fluffy.js/assets/images/6.jpg" alt="">
-                <img src="/fluffy.js/assets/images/7.jpg" alt="">
-                <img src="/fluffy.js/assets/images/8.jpg" alt="">
+                <img src="/fluffy.js/images/1.jpg" alt="">
+                <img src="/fluffy.js/images/2.jpg" alt="">
+                <img src="/fluffy.js/images/3.jpg" alt="">
+                <img src="/fluffy.js/images/4.jpg" alt="">
+                <img src="/fluffy.js/images/5.jpg" alt="">
+                <img src="/fluffy.js/images/6.jpg" alt="">
+                <img src="/fluffy.js/images/7.jpg" alt="">
+                <img src="/fluffy.js/images/8.jpg" alt="">
             </div>
         </div>
     </div>
@@ -61,6 +51,7 @@
     <p class="grid" id="my-trigger"></p>
     <p class="grid"><a class="back" href="/fluffy.js/">Back</a></p>
 
-    <script src="/fluffy.js/assets/js/fluffy.min.js"></script>
+    <script src="/scripts.js"></script>
+    <script src="/node_modules/fluffy.js/dist/fluffy.min.js"></script>
 </body>
 </html>
