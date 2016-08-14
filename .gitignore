@@ -1,9 +1,5 @@
-# gulp project files
-node_modules/
-bower_components/
-
-# temporary files
-.sass-cache
+node_modules/*
+!node_modules/fluffy.js
 
 # junk
 .DS_Store
