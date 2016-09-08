@@ -43,6 +43,7 @@ body {
   font-weight: 500;
   line-height: 3rem;
   margin-bottom: 3rem;
+  margin-top: 0;
 }
 
 .app-details > .headline::before {
