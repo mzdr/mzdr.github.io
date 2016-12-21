@@ -62,8 +62,8 @@ body {
 }
 
 .app-details > .download {
-  border-radius: 4px;
-  box-shadow: 0 0 0 1px currentColor;
+  border-radius: 1px;
+  box-shadow: 0 0 0 1px #2195f2;
   color: #2195f2;
   display: block;
   font-weight: 500;
