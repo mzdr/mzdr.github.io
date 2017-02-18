@@ -13,7 +13,7 @@ function convert(string) {
 }
 
 function syncOutputWithInput() {
-    output.value = 'content: ' + convert(input.value) + ';';
+    output.value = 'content: ' + (convert(input.value) || '""') + ';';
 }
 
 // On input
