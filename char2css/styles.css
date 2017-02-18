@@ -88,9 +88,9 @@ input {
 
 .app-footnotes > .link {
     display: block;
-    margin-bottom: 0.5em;
-    margin-left: 1.25em;
-    padding: 0.25em 0.25em 1.5em;
+    margin-bottom: 0.5rem;
+    margin-left: 1.25rem;
+    padding: 0.25rem 0.25rem 1.125rem;
     position: relative;
     text-decoration-skip: ink;
 }
@@ -100,11 +100,20 @@ input {
     outline: 0;
 }
 
+.app-footnotes > .link:not(:focus):hover::before {
+    content: "\25b6";
+    position: absolute;
+    right: 100%;
+    top: calc(0.25rem + 0.5em);
+    font-size: 0.75em;
+    line-height: 1;
+}
+
 .app-footnotes > .link::after {
     bottom: 0;
     content: attr(href);
     display: block;
-    left: 0.25em;
+    left: 0.25rem;
     opacity: 0.5;
     overflow: hidden;
     position: absolute;
@@ -115,5 +124,5 @@ input {
 
 .app-footnotes > .label {
     display: block;
-    margin: 1em 0;
+    margin: 1rem 0 0.5rem;
 }
