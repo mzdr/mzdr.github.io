@@ -1,1 +1,0 @@
-[https://github.com/johnnyos](https://github.com/johnnyos) &nbsp;&mdash;&nbsp; A small, simple and basic PHP Framework upon which you can build your own applications. It is built with respect to several design patterns like SOLID, DRY or the Rule of three.
