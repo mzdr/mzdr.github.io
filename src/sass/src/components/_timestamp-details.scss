@@ -1,0 +1,81 @@
+.timestamp-details {
+    margin: vertical-base(2) auto vertical-base(4);
+    text-align: center;
+
+    > .headline {
+        font-family: inherit;
+        font-size: 2.75em;
+        line-height: vertical-base(3);
+        margin-bottom: vertical-base(2);
+
+        &::before {
+            background-image: url("../images/timestamp/icon.svg");
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            content: "";
+            display: block;
+            margin-bottom: vertical-base();
+            height: vertical-base(8);
+        }
+    }
+
+    > .description {
+        margin: auto;
+        max-width: 36ch;
+    }
+
+    > .download {
+        border-radius: 1px;
+        box-shadow: 0 0 0 1px $color-cornflower-blue;
+        color: $color-cornflower-blue;
+        display: block;
+        font-weight: 500;
+        margin: vertical-base(2) auto vertical-base();
+        outline: 0;
+        padding: vertical-base(0.5);
+        text-decoration: none;
+        transition-property: color, background-color;
+        width: 17rem;
+
+        &:hover,
+        &:focus {
+            background-color: $color-cornflower-blue;
+        }
+
+        &:hover,
+        &:focus,
+        &:hover::after,
+        &:focus::after {
+            color: #fff;
+        }
+
+        &::after {
+            color: #333;
+            content: "(macOS 10.9+)";
+            display: block;
+            font-size: 0.75em;
+            font-weight: 400;
+            line-height: vertical-base(0.5);
+            opacity: 0.5;
+            transition-property: color;
+        }
+    }
+
+    > .further {
+        font-size: 0.6875em;
+        line-height: vertical-base(0.5);
+        opacity: 0.5;
+        outline: 0;
+        transition-property: opacity;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+
+        + .further {
+            margin-left: 0.5em;
+        }
+    }
+}

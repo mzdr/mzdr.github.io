@@ -1,0 +1,58 @@
+.macos-systembar {
+    @supports (display: flex) {
+        align-items: center;
+        display: flex;
+    }
+
+    > .app {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        vertical-align: middle;
+
+        + .app {
+            margin-left: 8px;
+
+            @supports (display: flex) {
+                margin-left: 14px;
+            }
+        }
+    }
+
+    // > .-time {
+    //     background: #2081f4;
+    //     color: #fff;
+    //     padding: 0 7px;
+    // }
+
+    > .-bluetooth {
+        background-image: url("../images/macos/bluetooth.svg");
+        height: 15px;
+        width: 11px;
+    }
+
+    > .-spotlight {
+        background-image: url("../images/macos/spotlight.svg");
+        height: 16px;
+        width: 16px;
+    }
+
+    > .-volume {
+        background-image: url("../images/macos/volume.svg");
+        height: 13px;
+        width: 17px;
+    }
+
+    > .-wifi {
+        background-image: url("../images/macos/wifi.svg");
+        height: 15px;
+        width: 22px;
+    }
+
+    > .-notificationcenter {
+        background-image: url("../images/macos/notification-center.svg");
+        height: 10px;
+        width: 18px;
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "mzdr.github.io",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node-sass ./src -o ../../assets/css --importer ./node_modules/node-sass-glob",
+    "build:prod": "npm run build -- --output-style compressed",
+    "watch": "npm run build -- --watch"
+  },
+  "author": "Sebastian Prein <hi@sebastianprein.com>",
+  "devDependencies": {
+    "node-sass": "^4.5.2",
+    "node-sass-glob": "^1.0.4"
+  },
+  "dependencies": {
+    "include-media": "^1.4.9",
+    "normalize.css": "^6.0.0"
+  },
+  "private": true
+}

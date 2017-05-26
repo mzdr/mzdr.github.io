@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="Sebastian Prein">
-  <meta name="description" content="⏰ A better macOS menu bar clock with a customizable date/time display and a calendar.">
-  <title>Timestamp</title>
-  <link rel="stylesheet" href="assets/styles.css">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Sebastian Prein">
+    <meta name="description" content="A better macOS menu bar clock with a customizable date/time display and a calendar.">
+    <title>Timestamp</title>
+    <link rel="stylesheet" href="../assets/css/timestamp.css">
 </head>
 <body>
-  <section class="app-details">
-    <h1 class="headline">Timestamp</h1>
-    <p class="description">A better macOS menu bar clock with a customizable date/time display and a calendar.</p>
-    <a class="download" href="https://github.com/mzdr/timestamp/releases/latest">Download</a>
-    <a class="further" href="https://github.com/mzdr/timestamp/blob/master/CHANGELOG.md">Changelog</a>
-    <a class="further" href="https://github.com/mzdr/timestamp#screenshots">Screenshots</a>
-    <a class="further" href="https://github.com/mzdr/timestamp">Source code</a>
-  </section>
-  <!-- <section class="app-demo"></section> -->
-  <script src="/ga.js"></script>
+    <div class="timestamp-container">
+        <section class="preview timestamp-preview">
+            <div class="menubar macos-menubar">
+                <div class="macos-appmenu">
+                    <span class="app">Finder</span>
+                    <span class="item">File</span>
+                    <span class="item">Edit</span>
+                    <span class="item">View</span>
+                    <span class="item">Go</span>
+                    <span class="item">Window</span>
+                    <span class="item">Help</span>
+                </div>
+                <div class="macos-systembar">
+                    <span class="app -time">13/1  Mon, 26.03.2018  22:40</span>
+                    <span class="app -wifi"></span>
+                    <span class="app -volume"></span>
+                    <span class="app -spotlight"></span>
+                    <span class="app -notificationcenter"></span>
+                </div>
+            </div>
+            <img class="app" src="../assets/images/timestamp/preview.jpg" alt="Preview of Timestamp">
+        </section>
+        <section class="details timestamp-details">
+            <h1 class="headline">Timestamp</h1>
+            <p class="description">A better macOS menu bar clock with a customizable date/time display and a calendar.</p>
+            <a class="download" href="https://github.com/mzdr/timestamp/releases/latest">Download</a>
+            <a class="further" href="https://github.com/mzdr/timestamp/blob/master/CHANGELOG.md">Changelog</a>
+            <a class="further" href="https://github.com/mzdr/timestamp#screenshots">Screenshots</a>
+            <a class="further" href="https://github.com/mzdr/timestamp">Source code</a>
+        </section>
+    </div>
+    <script src="../assets/js/ga.js" defer></script>
 </body>
 </html>

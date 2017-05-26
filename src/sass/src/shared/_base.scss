@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// Base styles.
+// -----------------------------------------------------------------------------
+:root {
+    box-sizing: border-box;
+    transition-duration: 333ms;
+    transition-property: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    transition-duration: inherit;
+    transition-property: inherit;
+    margin: 0;
+}
+
+a {
+    color: currentColor;
+    display: inline-block;
+    text-decoration-color: currentColor;
+    text-decoration-line: underline;
+    text-decoration-skip: ink;
+    text-decoration-style: solid;
+}
+
+body {
+    margin: 0;
+}
+
+p:not(:last-child),
+ul:not(:last-child) {
+    margin: 0 0 vertical-base(1);
+}

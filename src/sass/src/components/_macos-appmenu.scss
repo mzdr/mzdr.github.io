@@ -1,0 +1,30 @@
+.macos-appmenu {
+    &::before {
+        background-image: url("../images/macos/apple.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+        display: inline-block;
+        height: 16px;
+        vertical-align: text-top;
+        width: 13px;
+    }
+
+    > .app {
+        display: inline-block;
+        font-weight: bold;
+        margin-left: 16px;
+        margin-right: 14px;
+        vertical-align: top;
+    }
+
+    > .item {
+        display: inline-block;
+        vertical-align: top;
+
+        + .item {
+           margin-left: 14px;
+        }
+    }
+}

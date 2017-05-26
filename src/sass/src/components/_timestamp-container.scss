@@ -1,0 +1,12 @@
+.timestamp-container {
+    font-family: system, -apple-system, BlinkMacSystemFont, Helvetica Neue, Lucida Grande;
+
+    ::selection {
+        background-color: $color-cornflower-blue;
+        color: $color-white;
+    }
+
+    > .preview {
+        height: vertical-base(29);
+    }
+}
