@@ -1,50 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>mzdr.github.io</title>
-        <style>
-            body {
-                background-color: #111;
-                color: rgba(255, 255, 255, 0.125);
-                font-family: monospace;
-                font-size: 3rem;
-                padding: 25% 0;
-                text-align: center;
-                letter-spacing: 0.0625rem;
-            }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mzdr.github.io</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <style>
+      :root {
+          background-color: #111;
+          color: #333;
+          font-family: JetBrains Mono, monospace;
+          font-size: clamp(1rem, 0.8571rem + 0.7143vw, 2rem);
+          hyphens: auto;
+          letter-spacing: 0.0625rem;
+          line-height: 1.5;
+          text-align: center;
+          text-rendering: optimizeLegibility;
+          word-break: break-word;
+          height: 100%;
+      }
 
-            a {
-                color: rgba(255, 255, 255, 0.9);
-                text-decoration: none;
-                margin: 0 0.5rem;
-                padding: 0.5rem 0;
-                position: relative;
-            }
+      body {
+          align-items: center;
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          margin: 0;
+      }
 
-            a::after {
-                background-color: currentColor;
-                bottom: 0.25rem;
-                content: "";
-                height: 3px;
-                left: 0;
-                opacity: 0;
-                position: absolute;
-                transform: translateY(0.5rem);
-                transition: transform 1s, opacity 1s;
-                width: 100%;
-                z-index: -1;
-            }
+      a {
+          color: #eee;
+          margin: 0 0.5rem;
+          padding: 0.5rem 0;
+          position: relative;
+          text-decoration: none;
+          outline: 0;
+      }
 
-            a:hover::after,
-            a:focus::after {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        </style>
-    </head>
-    <body>github.com/<a href="https://github.com/mzdr">mzdr</a>/<a href="https://github.com/mzdr/mzdr.github.io">mzdr.github.io</a></body>
-    <script src="/ga.js"></script>
+      a::after {
+          background-color: currentColor;
+          bottom: 0.25rem;
+          content: "";
+          height: 2px;
+          left: 0;
+          opacity: 0;
+          position: absolute;
+          transform: translateY(0.5rem);
+          transition: transform 1s, opacity 1s;
+          width: 100%;
+      }
+
+      a:hover::after,
+      a:focus::after {
+          transform: translateY(0);
+          opacity: 1;
+      }
+  </style>
+</head>
+<body>github.com/<a href="https://github.com/mzdr">mzdr</a>/<a href="https://github.com/mzdr/mzdr.github.io">mzdr.github.io</a></body>
 </html>
